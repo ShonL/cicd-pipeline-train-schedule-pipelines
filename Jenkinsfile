@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-        eacho 'Running build automation (shon)...'
+        echo 'Running build automation (shon)...'
         sh './gradlew build --no-deamon'
         archiveArtifacts artifacts: 'dist/trainSchedule.zip'
       }
